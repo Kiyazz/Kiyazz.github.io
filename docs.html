@@ -37,6 +37,18 @@
 				<p><strong>param</strong>: <strong>actor</strong> A reference to an actor
 				<strong>param</strong>: <strong>save</strong> Should the actor be saved upon a call to Saving.SaveScene?</p>
 				<h3 id="saving-loadsavefromfile-savefile-string-scene-string-">Saving.LoadSaveFromFile(savefile : string, scene : string)</h3>
+				<p><strong>param</strong>: <strong>savefile</strong> The name of the save file to load
+				<strong>param</strong>: <strong>scene</strong> The name of the scene to use as a base</p>
+				<p>Loads the save by first loading the specified scene from the file as if by Scene.Load, then overwrites any actors sharing the same identity with the versions from the save file</p>
+				<h3 id="saving-loadsavecurrentscene-savefile-string-">Saving.LoadSaveCurrentScene(savefile : string)</h3>
+				<p><strong>param</strong>: <strong>savefile</strong> The name of the save file to load</p>
+				<p>Loads the save by overwriting any actors in the current scene sharing the same identity with the version from the save file. All other actors are left unaffected and no scene transition occurs</p>
+				<h3 id="saving-loadstate-savefile-string-">Saving.LoadState(savefile : string)</h3>
+				<p><strong>param</strong>: <strong>savefile</strong> The name of the save file to load</p>
+				<p>Loads the save from the savefile. This loads the save as a save state, so everything is exactly as it was at the time of saving, including globals and RNG seeding/advancement</p>
+				<h3 id="saving-getallsaves-">Saving.GetAllSaves()</h3>
+				<p><strong>return</strong>: A lua table where the keys are the accessible save files located in resources/saves and the values are lua tables containing the preview data</p>
+				<p>Gets all save files currently accessible along with any provided preview data</p>
 			</div>
 		</section>
 	</div>
