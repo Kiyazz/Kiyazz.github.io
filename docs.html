@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kiya Zadeh's Project Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+	<header id="header">
+		<a href="index.html" class="title">Kiya Zadeh</a>
+		<nav>
+			<ul>
+				<li><a href="index.html" style="font-size:20px">Home</a></li>
+				<li><a href="docs.html" style="font-size:20px">Docs</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id=wrapper>
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1>API Reference</h1>
+				<h3 id="saving-savestate-filename-string-">Saving.SaveState(filename : string)</h3>
+				<p><strong>param</strong>: <strong>filename</strong> The name of the file to save to</p>
+				<p>Saves everything in the current scene, including all information about all actors, components, and global variables</p>
+				<h3 id="saving-savescene-filename-string-previewdata-luatable-">Saving.SaveScene(filename : string, previewData : LuaTable)</h3>
+				<p><strong>param</strong>: <strong>filename</strong> The name of the file to save to
+				<strong>param</strong>: <strong>previewData</strong> A Lua Table containing any data to be made available for preview upon calling Saving.GetAllSaves. Useful for loading screens</p>
+				<p>Saves all actors marked for saving using Scene.SetActorSaving to the specified file</p>
+				<h3 id="scene-setactorsaving-actor-actor-save-bool-">Scene.SetActorSaving(actor : Actor, save : bool)</h3>
+				<p><strong>param</strong>: <strong>actor</strong> A reference to an actor
+				<strong>param</strong>: <strong>save</strong> Should the actor be saved upon a call to Saving.SaveScene?</p>
+				<h3 id="saving-loadsavefromfile-savefile-string-scene-string-">Saving.LoadSaveFromFile(savefile : string, scene : string)</h3>
+			</div>
+		</section>
+	</div>
+	<footer id="footer" class="wrapper alt">
+					<div class="inner">
+						<ul class="menu">
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+	</body>
+</html>
